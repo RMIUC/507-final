@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>About this site</title>
+</head>
+<body>
+    <h1>
+        Welcome to Github Analyzer!
+    </h1>
+    <h3>User Searched: {{ results }}</h3>
+    <p>{{ results }} made {{ score }} contributions over the last 52 weeks. 
+        {% if score > 1500 %}Wow... what an amazing programmer!
+        {% elif score > 500 %}Excellent work! Keep it up!
+        {% elif score <= 500 and score >= 100 %}Reasonable work! Work harder!
+        {% else %}Oh, I see...</p>
+        {% endif %}
+    <table>
+        <tr>
+            <th>Days</th>
+            <th>Weeks</th>
+            <th>Months</th>
+        </tr>
+        <tr>
+            <td><img src="/plotday.png" width="100%"></td>
+            <td><img src="/plotweek.png" width="100%"></td>
+            <td><img src="/plotmonth.png" width="100%"></td>
+        </tr>
+    </table>
+    
+    <a href="/">Try Again</a>
+</body>
+</html>
